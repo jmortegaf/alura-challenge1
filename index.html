@@ -5,16 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge 1</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/theme-toggle.css">
 </head>
-<body>
-    <header></header>
-    <main></main>
+<body class="light-mode-body">
+    <header class="header">
+        <section class="header-content">
+            <a class="header-link" href="https://www.aluracursos.com">
+                <img src="assets/vector.png" alt="Logo AluraCursos"></a>
+            <div class="toggle-mode">
+                <input type="checkbox" name="" id="darkmode-toggle" onclick="change_mode()">
+                <label for="darkmode-toggle"></label>
+            </div>
+        </section>
+    </header>
+    <main class="main-content">
+        <section class="main-section">
+            <section class="input-section">
+                <textarea class="textarea-input" name="" id="" placeholder="Ingrese el texto aqui"></textarea>
+                <div class="input-btn-group">
+                    <a class="primary-btn">Encriptar</a>
+                    <a class="secondary-btn">Desenciptar</a>
+                </div>
+            </section>
+            <section class="output-section">
+                <textarea class="textarea-output" ></textarea>
+                <div class="input-btn-group">
+                    <a class="primary-btn">Copiar</a>
+                </div>
+            </section>
+        </section>
+    </main>
     <footer class="footer">
-        <p class="footer__texto">
+        <p class="footer-texto">
             Desarrollado por Jose Ortega
             <br>
             <a href="mailto:j.ortegafreire@gmail.com" class="footer__link">j.ortegafreire@gmail.com</a>
         </p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
-    --color-primario: #000000;
-    --color-secundario: #f6f6f6;
-    --color-terciario: #22d4fd;
-    --color-hover: #272727;
+    --color1:#e5e5e5;
+    --color2:#0a3871;
+    --color3:#d8dfe8;
+    --color4:#ffffff;
+    --color5:#343a40;
+    --color6:#495057;
+
     --fuente-montserrat: 'Montserrat', sans-serif;
     --fuente-krona: 'Krona One', sans-serif
 }
@@ -12,24 +15,42 @@
     margin: 0;
 }
 body{
-    background-color: var(--color-primario);
-    color: var(--color-secundario);
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color1);
 
 }
-.footer{
+.header-content{
     display: flex;
-    justify-content: space-around;
-    background-color: var(--color-terciario);
-    color: var(--color-primario);
-    text-align: center;
+    justify-content: space-between;
+    flex-direction: row;
 }
-.footer__texto{
-    font-family: "Krona One", sans-serif;
-    font-size: 12px;
+.header-link{
+    padding: 25px;
 }
-.footer__link{
-    font-family: "Krona One", sans-serif;
-    font-size: 12px;
-    text-decoration: none;
+.main-section{
+    display: flex;
+    flex-direction: row;
+}
+.input-section{
+    display: flex;
+    flex-direction: column;
+}
+.textarea-input{
+    background-color: var(--color1);
+    border: 0;
+    color:var(--color2);
+    font-family: var(--fuente-montserrat);
+    font-size: 24px;
+    font-weight:600;
+    resize: none;
+    width: 95%;
+    height: 80%;
+}
+.textarea-input::placeholder{
+    color: var(--color2);
+}
+.textarea-input:focus{
+    outline: none !important;
+
 }
