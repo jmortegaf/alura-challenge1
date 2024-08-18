@@ -10,6 +10,7 @@
     <header class="header">
         <a class="header-link" href="https://www.aluracursos.com">
             <img src="assets/vector.png" alt="Logo AluraCursos"></a>
+        <div id="toastBox"></div>
         <div class="toggle-mode">
             <input class="toggle-mode-checkbox" type="checkbox" name="" id="darkmode-toggle" onclick="change_mode()">
             <label class="toggle-mode-label" for="darkmode-toggle"></label>
@@ -17,25 +18,37 @@
     </header>
     <main class="main">
         <section class="main-input-section">
-            <div class="toggle-function">
-                <input class="toggle-function-checkbox" type="checkbox" name="" id="toggle-function" onclick="change_function()" checked>
-                <label class="toggle-function-label" for="toggle-function">
-                    <p class="function1-label" id="function1-label">Encriptar</p>
-                    <p class="function2-label" id="function2-label">Desencriptar</p>
-                </label>
+            <div class="input-controls">
+                <div class="toggle-function">
+                    <input class="toggle-function-checkbox" type="checkbox" name="" id="toggle-function" onclick="change_function()" checked>
+                    <label class="toggle-function-label" for="toggle-function">
+                        <p class="function1-label" id="function1-label">Encriptar</p>
+                        <p class="function2-label" id="function2-label">Desencriptar</p>
+                    </label>
+                </div>
+                <div class="control-btns">
+                    <a class="paste-btn" onclick="paste_text()">
+                        <img class="btn-img" src="assets/paste.png" alt="Pegar">
+                    </a>
+                    <a class="clear-btn" onclick="clear_input()">
+                        <img class="btn-img" src="assets/clear.png" alt="Limpiar">
+                    </a>      
+                </div>
             </div>
             <textarea class="textarea-input" name="" id="input-text" placeholder="Ingrese el texto aqui"></textarea>
-            <!-- <div class="input-btn-group">
-                <a class="input-primary-btn" onclick="encriptar()">Encriptar</a>
-                <a class="input-secondary-btn">Desenciptar</a>
-            </div> -->
+            <div class="warning">
+                <img class="warning-img" src="assets/warning.png">
+                <p class="warning-msg">Solo letras minusculas y sin acentos</p>
+            </div>
         </section>
         <section class="main-output-section">
             <div class="output-section" id="output-section">
+                <div class="output-controls">
+                    <a class="copy-btn" onclick="copy_text()">
+                        <img class="btn-img" src="assets/copy.png">
+                    </a>
+                </div>
                 <textarea class="textarea-output" id="output-text" ></textarea>
-                <div class="output-btn-group">
-                    <a class="output-primary-btn" onclick="copy_text()">Copiar</a>
-                </div>    
             </div>
             <div class="empty-output-section" id="empty-output-section">
                 <img class="output-image" src="assets/muneco.png">
