@@ -5,43 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge 1</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/theme-toggle.css">
 </head>
 <body class="light-mode-body">
     <header class="header">
-        <section class="header-content">
-            <a class="header-link" href="https://www.aluracursos.com">
-                <img src="assets/vector.png" alt="Logo AluraCursos"></a>
-            <div class="toggle-mode">
-                <input type="checkbox" name="" id="darkmode-toggle" onclick="change_mode()">
-                <label for="darkmode-toggle"></label>
+        <a class="header-link" href="https://www.aluracursos.com">
+            <img src="assets/vector.png" alt="Logo AluraCursos"></a>
+        <div class="toggle-mode">
+            <input class="toggle-mode-checkbox" type="checkbox" name="" id="darkmode-toggle" onclick="change_mode()">
+            <label class="toggle-mode-label" for="darkmode-toggle"></label>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main-input-section">
+            <div class="toggle-function">
+                <input class="toggle-function-checkbox" type="checkbox" name="" id="toggle-function" onclick="change_function()" checked>
+                <label class="toggle-function-label" for="toggle-function">
+                    <p class="function1-label" id="function1-label">Encriptar</p>
+                    <p class="function2-label" id="function2-label">Desencriptar</p>
+                </label>
+            </div>
+            <textarea class="textarea-input" name="" id="input-text" placeholder="Ingrese el texto aqui"></textarea>
+            <!-- <div class="input-btn-group">
+                <a class="input-primary-btn" onclick="encriptar()">Encriptar</a>
+                <a class="input-secondary-btn">Desenciptar</a>
+            </div> -->
+        </section>
+        <section class="main-output-section">
+            <div class="output-section" id="output-section">
+                <textarea class="textarea-output" id="output-text" ></textarea>
+                <div class="output-btn-group">
+                    <a class="output-primary-btn" onclick="copy_text()">Copiar</a>
+                </div>    
+            </div>
+            <div class="empty-output-section" id="empty-output-section">
+                <img class="output-image" src="assets/muneco.png">
+                <div class="output-info">
+                    <p class="output-info-title">Ningún mensaje fue encontrado</p>
+                    <p class="output-info-msg">Ingresa el texto que deseas encriptar o desencriptar</p>
+                </div>    
             </div>
         </section>
-    </header>
-    <main class="main-content">
-        <section class="main-section">
-            <section class="input-section">
-                <textarea class="textarea-input" name="" id="" placeholder="Ingrese el texto aqui"></textarea>
-                <div class="input-btn-group">
-                    <a class="primary-btn">Encriptar</a>
-                    <a class="secondary-btn">Desenciptar</a>
-                </div>
-            </section>
-            <section class="output-section">
-                <textarea class="textarea-output" ></textarea>
-                <div class="input-btn-group">
-                    <a class="primary-btn">Copiar</a>
-                </div>
-            </section>
-        </section>
+    </section>
     </main>
-    <footer class="footer">
-        <p class="footer-texto">
-            Desarrollado por Jose Ortega
-            <br>
-            <a href="mailto:j.ortegafreire@gmail.com" class="footer__link">j.ortegafreire@gmail.com</a>
-        </p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
