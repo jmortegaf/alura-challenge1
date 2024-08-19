@@ -29,19 +29,19 @@ function encript_char(current_char){
     var encripted_char=''
     switch(current_char){
         case 'a':
-            encripted_char='ai'
+            encripted_char='apa'
             break;
         case 'e':
-            encripted_char='enter';
+            encripted_char='epe';
             break;
         case 'i':
-            encripted_char='imes';
+            encripted_char='ipi';
             break;
         case 'o':
-            encripted_char='ober';
+            encripted_char='opo';
             break;
         case 'u':
-            encripted_char='ufat';
+            encripted_char='upu';
             break
         default:
             encripted_char=current_char;
@@ -64,33 +64,33 @@ function decript_text(text){
         console.log(text.charAt(i))
         switch(text.charAt(i)){
             case 'a':
-                if((i+1)>=text.length)error_flag=true;
-                else if(text.charAt(i+1)!='i')error_flag=true;
-                else i+=2;
+                if((i+2)>=text.length)error_flag=true;
+                else if(text.charAt(i+1)!='p' || text.charAt(i+2)!='a')error_flag=true;
+                else i+=3;
                 decripted_text+='a';
                 break;
             case 'e':
-                if((i+4)>=text.length)error_flag=true;
-                else if(text.charAt(i+1)!='n' || text.charAt(i+2)!='t' || text.charAt(i+3)!='e' || text.charAt(i+4)!='r')error_flag=true;
-                else i+=5;
+                if((i+2)>=text.length)error_flag=true;
+                else if(text.charAt(i+1)!='p' || text.charAt(i+2)!='e')error_flag=true;
+                else i+=3;
                 decripted_text+='e';
                 break;
             case 'i':
-                if((i+3)>=text.length)error_flag=true;
-                else if(text.charAt(i+1)!='m' || text.charAt(i+2)!='e' || text.charAt(i+3)!='s')error_flag=true;
-                else i+=4;
+                if((i+2)>=text.length)error_flag=true;
+                else if(text.charAt(i+1)!='p' || text.charAt(i+2)!='i')error_flag=true;
+                else i+=3;
                 decripted_text+='i';
                 break;
             case 'o':
-                if((i+3)>=text.length)error_flag=true;
-                else if(text.charAt(i+1)!='b' || text.charAt(i+2)!='e' || text.charAt(i+3)!='r')error_flag=true;
-                else i+=4;
+                if((i+2)>=text.length)error_flag=true;
+                else if(text.charAt(i+1)!='p' || text.charAt(i+2)!='o')error_flag=true;
+                else i+=3;
                 decripted_text+='o';
                 break;
             case 'u':
-                if((i+3)>=text.length)error_flag=true;
-                else if(text.charAt(i+1)!='f' || text.charAt(i+2)!='a' || text.charAt(i+3)!='t')error_flag=true;
-                else i+=4;
+                if((i+2)>=text.length)error_flag=true;
+                else if(text.charAt(i+1)!='p' || text.charAt(i+2)!='u')error_flag=true;
+                else i+=3;
                 decripted_text+='u';
                 break;
             default:
